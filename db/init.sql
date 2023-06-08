@@ -1,0 +1,9 @@
+DROP DATABASE IF EXISTS library;
+CREATE DATABASE library;
+
+DROP TABLE IF EXISTS book;
+CREATE TABLE library.book (
+    id   BIGINT NOT NULL,
+    name VARCHAR(8192),
+    PRIMARY KEY (id)
+);
