@@ -24,7 +24,7 @@ public class BookRepository {
     public List<Book> listAllBooks() {
         return listAllBookRecords()
             .stream()
-            .map(r -> new Book(r.getId(), r.getName()))
+            .map(r -> new Book(r.getId(), r.getTitle()))
             .collect(Collectors.toList());
     }
 
@@ -35,7 +35,7 @@ public class BookRepository {
         while(rs.next()) {
             records.add(new BookRecord(
                 rs.getLong("id"), 
-                rs.getString("name")));
+                rs.getString("title")));
         }
         return records;
     }
