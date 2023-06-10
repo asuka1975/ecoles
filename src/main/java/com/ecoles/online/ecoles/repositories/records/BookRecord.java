@@ -7,5 +7,5 @@ import lombok.Value;
 public class BookRecord {
     long id;
     @NonNull
-    String name;
+    String title;
 }
