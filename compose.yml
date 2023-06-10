@@ -5,7 +5,8 @@ services:
       - "5432:5432"
     volumes:
       - db-store:/var/lib/postgresql/data
-      - ./db:/docker-entrypoint-initdb.d
+      - ./db/init:/docker-entrypoint-initdb.d
+      - ./db/data:/data
     environment:
       POSTGRES_USER: "postgres"
       POSTGRES_PASSWORD: "postgres"
