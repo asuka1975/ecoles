@@ -12,7 +12,6 @@ const post_books_request_field = document.querySelector('.post-books-request-fie
 const post_books_response_field = document.querySelector('.post-books-response-field');
 
 post_books_request_button.addEventListener('click', async () => {
-    console.log(post_books_request_field.textContent);
     const text = await fetch("/books", {
         method: "POST",
         headers: {
