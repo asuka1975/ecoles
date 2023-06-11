@@ -1,6 +1,6 @@
 package com.ecoles.online.ecoles.models;
 
-import java.sql.Date;
+import java.util.Date;
 
 import io.micrometer.common.lang.NonNull;
 import lombok.Value;
