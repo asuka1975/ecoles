@@ -20,4 +20,8 @@ public class BookService {
     public List<Book> listAllBooks() {
         return repository.listAllBooks();
     }
+
+    public Book postBook(String title) {
+        return repository.insertBook(title);
+    }
 }
