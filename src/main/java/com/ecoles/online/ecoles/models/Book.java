@@ -1,6 +1,7 @@
 package com.ecoles.online.ecoles.models;
 
 import java.util.Date;
+import java.util.List;
 
 import io.micrometer.common.lang.NonNull;
 import lombok.Value;
@@ -12,4 +13,6 @@ public class Book {
     String title;
     @NonNull
     Date createdAt;
+    @NonNull
+    List<Author> authors;
 }
