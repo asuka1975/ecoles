@@ -24,4 +24,8 @@ public class BookService {
     public Book postBook(String title) {
         return repository.insertBook(title);
     }
+
+    public Book getBook(int bookId) {
+        return repository.getBook(bookId);
+    }
 }

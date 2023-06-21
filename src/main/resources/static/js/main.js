@@ -22,3 +22,14 @@ post_books_request_button.addEventListener('click', async () => {
         .then(r => r.text());
     post_books_response_field.textContent = text;
 });
+
+const get_book_request_button = document.querySelector('.get-book-request-button');
+const get_book_request_field = document.querySelector('.get-book-request-field');
+const get_book_response_field = document.querySelector('.get-book-response-field');
+
+get_book_request_button.addEventListener('click', async () => {
+    console.log(get_book_request_field.textContent);
+    const text = await fetch(`/books/${parseInt(get_book_request_field.textContent)}`)
+        .then(r => r.text());
+    get_book_response_field.textContent = text;
+});

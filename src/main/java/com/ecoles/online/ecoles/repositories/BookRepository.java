@@ -58,6 +58,13 @@ public class BookRepository {
             .collect(Collectors.toList());
     }
 
+    public Book getBook(int bookId) {
+        BookRecord bookRecord = getBookRecordById(bookId);
+        List<Author> authors = listAuthorsByBookId(bookId);
+
+        return new Book(bookRecord.getId(), bookRecord.getTitle(), bookRecord.getCreatedAt(), authors);
+    }
+
     public Book insertBook(String title) {
         int id = jdbc.queryForObject("INSERT INTO book (title, created_at) VALUES (?, ?) RETURNING id", Integer.class, title, new Date());
 
